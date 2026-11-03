@@ -1,6 +1,7 @@
-# receipts regenerate; never commit them
+# Ignored: telemetry and raw streams. Receipts are committed; see training/receipts/.
 telemetry/
-receipts/
+raw/
+receipts/raw/
 __pycache__/
 *.pyc
 .pytest_cache/

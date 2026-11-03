@@ -12,12 +12,17 @@ This folder is the canonical, in-tree home for the principal's structured memory
 
 ```
 DST=$HOME/.agent-harness/projects/<key>/memory
+CURATED=<path to the curated layer>
 mkdir -p "$DST"   # the harness garbage-collects an empty memory dir, so mkdir is required
-find "$REPO/long-term-memory/curated" -maxdepth 1 -name '*.md' \
+find "$CURATED" -maxdepth 1 -name '*.md' \
   ! -name 'ARCHITECTURE.md' -exec cp {} "$DST"/ \;
 ```
 
 `<key>` is the working directory with slashes rendered as dashes. One copy restores active memory on a fresh machine or after a rename.
+
+`CURATED` is wherever the curated layer sits in your tree. The convention is the directory and its card shape, never one machine's layout: the layer is portable because it is a directory of files, and a path written into a re-seed command is the one part of it that is not.
+
+Provenance: 2026-11-03, the example path is stated as a placeholder per the layout ruling of 2026-10-30. The principle is unchanged.
 
 ## _inbox/
 
