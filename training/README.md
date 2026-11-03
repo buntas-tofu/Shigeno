@@ -26,3 +26,29 @@ sampling-side: a termination chunk taught the stopping boundary.
 
 All numbers are aggregates reproducible from this chapter's own files or
 from the receipts they cite. The estate originals stay private.
+
+## A note on the dataset counts
+
+Added 2026-11-03, per the reconciliation ruling of 2026-10-30. The receipt
+bodies are not edited, so one number in them reads against the others.
+`receipts/v1-receipt.md` records the training data as "v0, 48 examples", and
+the two committed v0 receipts report 64 and 43. There were three cuts, not one,
+and each figure belongs to its own source:
+
+- 64 examples: the first cut, built from the session archive plus the corpus
+  replica described in `receipts/trainset-v0-receipt.md`.
+- 43 examples: the second cut, the gemma variant of the same source and method,
+  in `receipts/trainset-v0-gemma-receipt.md`.
+- 48 examples: the de-censused cut, which is the one v1 trained on.
+
+This note is the only place the three are named together. A reader who wants
+the count for a version should read that version's receipt, not this paragraph.
+
+## Where this chapter ends
+
+The receipts document the August lineage: one 27B base, loaded 4-bit on a single
+24 GiB card. The base has changed since, and an adapter is bound to the base it
+trained on, so a base swap means retraining rather than retuning. That does not
+age the chapter. The law it records, a receipt for every number and an expert
+eye over a sample before any set trains, carries forward to whatever base runs
+now. The numbers are history. The method is current.
